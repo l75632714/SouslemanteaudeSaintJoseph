@@ -72,7 +72,7 @@
 </head>
 <body class="bg-slate-800 text-slate-800 font-['Open_Sans'] min-h-screen flex flex-col relative transition-colors duration-500">
 
-  <!-- Option 2 : Uniquement le dessin fait main en arrière-plan global -->
+  <!-- Arrière-plan global -->
   <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
     <img src="Sketch1793913958083allrightsreservedtoLouiseÉmilieSchreiber.png" alt="Arrière-plan dessin" class="absolute inset-0 w-full h-full object-cover select-none">
   </div>
@@ -225,7 +225,7 @@
 
   </div>
 
-  <!-- Scripts -->
+  <!-- Scripts corrigés -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       renderNeuvaine();
@@ -233,19 +233,12 @@
 
     function renderNeuvaine() {
       const container = document.getElementById("neuvaine-list");
-      const completionMsg = document.getElementById("neuvaine-completion-msg");
       if (!container) return;
       container.innerHTML = "";
-
-      let allChecked = true;
 
       for (let i = 1; i <= 9; i++) {
         const storageKey = `neuvaine_jour_${i}`;
         const isChecked = localStorage.getItem(storageKey) === "true";
-
-        if (!isChecked) {
-          allChecked = false;
-        }
 
         const label = document.createElement("label");
         label.className = "flex items-center justify-between p-3 rounded-xl border border-slate-100 bg-slate-50/60 hover:bg-amber-50/40 hover:border-amber-200/60 cursor-pointer transition group";
@@ -264,11 +257,8 @@
         container.appendChild(label);
       }
 
-      if (allChecked) {
-        completionMsg.classList.remove("hidden");
-      } else {
-        completionMsg.classList.add("hidden");
-      }
+      // Vérification immédiate au chargement de la page
+      checkCompletion();
     }
 
     function checkCompletion() {
@@ -280,10 +270,12 @@
         }
       }
       const completionMsg = document.getElementById("neuvaine-completion-msg");
-      if (allChecked) {
-        completionMsg.classList.remove("hidden");
-      } else {
-        completionMsg.classList.add("hidden");
+      if (completionMsg) {
+        if (allChecked) {
+          completionMsg.classList.remove("hidden");
+        } else {
+          completionMsg.classList.add("hidden");
+        }
       }
     }
 
@@ -440,7 +432,7 @@
             <p>de travailler en conscience, mettant le culte du devoir au-dessus de mes inclinations ;</p>
             <p>de travailler avec reconnaissance et joie, regardant comme un honneur d’employer et de développer par le travail les dons reçus de Dieu ;</p>
             <p>de travailler avec ordre, paix, modération et patience, sans jamais reculer devant la lassitude et les difficultés ;</p>
-            <p>de travailler surtout avec pureté d’intention et avec détachement de moi-même ayant sans cesse devant les yeux la mort et le compte que je devrai rendre du temps perdu, des talents inutilisés, du bien omis et des vaines complaisances dans le succès, si funeste à l’œuvre de Dieu.</p>
+            <p>de travailler surtout avec pureté d’intention et avec détachement de moi-même ayant sans cesse devant les  <p>de travailler surtout avec pureté d’intention et avec détachement de moi-même ayant sans cesse devant les yeux la mort et le compte que je devrai rendre du temps perdu, des talents inutilisés, du bien omis et des vaines complaisances dans le succès, si funeste à l’œuvre de Dieu.</p>
             <p>Tout pour Jésus, tout pour Marie, tout à votre imitation, patriarche Joseph ! telle sera ma devise à la vie à la mort. Ainsi soit-il</p>
           </div>
           <div class="text-[11px] text-slate-400 border-t border-slate-100 pt-3 text-center">
