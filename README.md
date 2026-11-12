@@ -407,7 +407,7 @@
             <p><strong>Source :</strong> nd-de-graces.com</p>
           </div>
         `;
-      } else if (prayerKey ===_ 'pie-x') {
+      } else if (prayerKey ==='pie-x') {
         content.innerHTML = `
           <div class="flex items-center justify-between mb-4 pb-2">
             <button onclick="openModal('dates')" class="text-xs font-bold text-red-700 hover:text-red-800 flex items-center gap-1 cursor-pointer">
