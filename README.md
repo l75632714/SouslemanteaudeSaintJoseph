@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" class="h-full bg-slate-50">
+<html lang="fr" class="h-full bg-white">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -17,6 +17,7 @@
     body {
       font-family: 'Open Sans', sans-serif;
       -webkit-tap-highlight-color: transparent;
+      background-color: #ffffff !important;
     }
     .font-opensans-bold {
       font-family: 'Open Sans', sans-serif;
@@ -46,9 +47,6 @@
     .soothing-mode .text-royal {
       color: #93c5fd !important;
     }
-    .soothing-mode .border-silver {
-      border-color: #334155 !important;
-    }
 
     .halo-effect {
       box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
@@ -67,9 +65,9 @@
     }
   </style>
 </head>
-<body class="bg-[#f3eee4] text-slate-800 font-['Open_Sans'] min-h-screen flex flex-col bg-cover bg-center bg-no-repeat bg-fixed transition-colors duration-500" style="background-image: url('sketch1793913958083allrightsreservedtoLouiseÉmilieSchreiber.png');">
+<body class="bg-white text-slate-800 font-['Open_Sans'] min-h-screen flex flex-col bg-cover bg-center bg-no-repeat bg-fixed transition-colors duration-500" style="background-image: url('sketch1793913958083allrightsreservedtoLouiseÉmilieSchreiber.png'); background-color: #ffffff;">
 
-  <div id="app" class="min-h-screen flex flex-col justify-between">
+  <div id="app" class="min-h-screen flex flex-col justify-between bg-white/90">
 
     <!-- En-tête -->
     <header class="header-bg bg-custom-blue text-white shadow-md w-full border-0">
@@ -110,7 +108,7 @@
     <!-- Layout Principal -->
     <div class="max-w-7xl mx-auto px-4 md:px-6 py-8 flex-grow w-full flex flex-col md:flex-row gap-8 items-stretch">
       
-            <!-- Panneau Latéral Gauche : Neuvaine -->
+      <!-- Panneau Latéral Gauche : Neuvaine -->
       <aside class="w-full md:w-72 flex-shrink-0 flex flex-col">
         <div id="neuvaine-panel" class="bg-card bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80 transition-colors duration-500 h-full flex flex-col justify-between">
           <div>
@@ -122,19 +120,21 @@
                 Suivez l'avancement de votre neuvaine :
               </p>
             </div>
+
             <!-- Liste verticale des 9 jours -->
             <div id="neuvaine-list" class="space-y-2.5"></div>
           </div>
 
           <!-- Message de fin de neuvaine -->
-          <div id="neuvaine-completion-msg" class="mt-6 pt-4 border-t border-amber-200/60 text-center">
+          <div id="neuvaine-completion-msg" class="mt-6 pt-4 border-t border-amber-200/60 text-center" style="display: none;">
             <p class="text-xs font-opensans-bold text-amber-700 italic">
               Que vos prières soient exaucées.
             </p>
           </div>
         </div>
       </aside>
-   <!-- Zone Principale -->
+
+      <!-- Zone Principale -->
       <main class="flex-grow w-full flex flex-col">
         <section id="main-section" class="bg-card bg-white rounded-2xl p-6 md:p-10 shadow-sm border border-slate-200/80 transition-colors duration-500 relative flex flex-col justify-between h-full">
           
@@ -148,11 +148,11 @@
             <!-- Conteneur avec le tableau principal de NOMA et les pastilles interactives -->
             <div class="halo-container max-w-md mx-auto relative flex flex-col items-center w-full flex-grow justify-center">
               
-              <div class="relative rounded-2xl overflow-hidden halo-effect border-2 border-amber-400/40 p-1 bg-slate-900 w-full flex justify-center h-full max-h-[580px]">
+              <div class="relative rounded-2xl overflow-hidden halo-effect border-2 border-amber-400/40 p-1 bg-white w-full flex justify-center h-full max-h-[580px]">
                 <img 
                   src="https://noma.org/wp-content/uploads/2018/01/56-63-old.jpg" 
                   alt="Saint Joseph et l'Enfant-Jésus" 
-                  class="w-full h-full object-cover rounded-xl transition-transform duration-500"
+                  class="w-full h-full object-cover rounded-xl transition-transform duration-500 bg-white"
                 />
 
                 <!-- Pastilles interactives -->
@@ -192,7 +192,7 @@
 
     <!-- Bloc superposé Nazareth -->
     <div class="relative z-10 -mb-6 flex justify-center px-4">
-      <div class="inline-flex items-center gap-4 rounded-xl border border-amber-200/60 bg-white/95 px-6 py-3 shadow-md backdrop-blur-sm text-lg font-opensans-bold text-slate-800">
+      <div class="inline-flex items-center gap-4 rounded-xl border border-amber-200/60 bg-white px-6 py-3 shadow-md backdrop-blur-sm text-lg font-opensans-bold text-slate-800">
         <span class="text-slate-500 font-normal">Nazareth :</span>
         <a href="https://artsandculture.google.com/entity/nazareth/m05fz3?hl=fr" target="_blank" rel="noopener noreferrer" class="hover:text-amber-700 hover:underline transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500 rounded">Découvrir</a>
         <span class="text-slate-300">•</span>
@@ -253,9 +253,9 @@
       const completionMsg = document.getElementById("neuvaine-completion-msg");
       if (completionMsg) {
         if (allChecked) {
-          completionMsg.classList.remove("hidden");
+          completionMsg.style.display = "block";
         } else {
-          completionMsg.classList.add("hidden");
+          completionMsg.style.display = "none";
         }
       }
     }
@@ -407,7 +407,7 @@
             <p><strong>Source :</strong> nd-de-graces.com</p>
           </div>
         `;
-      } else if (prayerKey === 'pie-x') {
+      } else if (prayerKey ===_ 'pie-x') {
         content.innerHTML = `
           <div class="flex items-center justify-between mb-4 pb-2">
             <button onclick="openModal('dates')" class="text-xs font-bold text-red-700 hover:text-red-800 flex items-center gap-1 cursor-pointer">
