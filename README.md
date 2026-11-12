@@ -8,7 +8,7 @@
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Google Fonts: Open Sans (Normale & Grasse) -->
+  <!-- Google Fonts: Open Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -62,7 +62,6 @@
       transform: scale(1.01);
     }
 
-    /* Couleur de la pastille bleue pour le fond de l'en-tête */
     .bg-custom-blue {
       background-color: #2563eb;
     }
@@ -83,20 +82,20 @@
 
   <div id="app" class="relative z-10 min-h-screen flex flex-col justify-between">
 
-    <!-- En-tête Fixe en haut de page (non collant) -->
+    <!-- En-tête Fixe -->
     <header class="header-bg bg-custom-blue text-white shadow-md w-full border-0">
       <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between border-0">
         
-        <!-- Zone Gauche : Icônes blanc sur noir -->
+        <!-- Zone Gauche : Icônes -->
         <div class="flex items-center space-x-2">
-          <!-- Bouton Musique (Haut-parleur) -->
+          <!-- Bouton Musique -->
           <button id="dove-btn" onclick="toggleDoveSound()" title="Ambiance Musicale" class="p-1.5 rounded-full bg-black hover:bg-slate-800 text-white transition cursor-pointer flex items-center justify-center active:scale-95">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
             </svg>
           </button>
 
-          <!-- Bouton Lumière Apaisante (Icône Soleil) -->
+          <!-- Bouton Lumière Apaisante -->
           <button id="light-btn" onclick="toggleSoothingLight()" title="Lumière apaisante" class="p-1.5 rounded-full bg-black hover:bg-slate-800 text-white transition cursor-pointer flex items-center justify-center active:scale-95">
             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="4"/>
@@ -112,42 +111,39 @@
           </button>
         </div>
 
-        <!-- Titre de l'application centré en jaune -->
-        <h1 class="B612 Mono-Regular 400 text-lg md:text-2xl tracking-wide text-amber-400 text-center m-0 p-0 border-0 flex-1">
+        <!-- Titre centré -->
+        <h1 class="text-lg md:text-2xl tracking-wide text-amber-400 text-center m-0 p-0 border-0 flex-1 font-opensans-bold">
           Sous le manteau de Saint Joseph
         </h1>
 
-        <!-- Espaceur invisible à droite pour équilibrer le titre centré -->
         <div class="w-14"></div>
 
       </div>
     </header>
 
-    <!-- Layout Principal : Menu Neuvaine à gauche, Contenu à droite -->
+    <!-- Layout Principal -->
     <div class="max-w-7xl mx-auto px-4 md:px-6 py-8 flex-grow w-full flex flex-col md:flex-row gap-8 items-stretch">
       
-      <!-- Panneau Latéral Gauche : Neuvaine à Saint Joseph -->
+      <!-- Panneau Latéral Gauche : Neuvaine -->
       <aside class="w-full md:w-72 flex-shrink-0 flex flex-col">
         <div id="neuvaine-panel" class="bg-card bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80 transition-colors duration-500 h-full flex flex-col justify-between">
           <div>
-            <!-- Titre & Description alignés à gauche -->
             <div class="mb-6 flex flex-col items-start text-left border-0">
-              <h2 class="font-opensans-bold text-slate-900 text-royal mb-1 m-0 p-0 border-0 whitespace-nowrap" style="font-size: 18px !important;">
+              <h2 class="font-opensans-bold text-slate-900 text-royal mb-1 m-0 p-0 border-0" style="font-size: 18px !important;">
                 Neuvaine à Saint Joseph
               </h2>
-
               <p class="text-xs text-slate-500 italic m-0 p-0 border-0">
                 Suivez l'avancement de votre neuvaine :
               </p>
             </div>
 
-            <!-- Liste verticale fine des 9 jours (Générée dynamiquement avec sauvegarde) -->
+            <!-- Liste des 9 jours -->
             <div id="neuvaine-list" class="space-y-2.5">
               <!-- Rempli par JavaScript -->
             </div>
           </div>
 
-          <!-- Zone de fin de neuvaine avec votre message exact -->
+          <!-- Message de fin de neuvaine exact -->
           <div id="neuvaine-completion-msg" class="hidden mt-6 pt-4 border-t border-amber-200/60 text-center">
             <p class="text-xs font-opensans-bold text-amber-700 italic">
               Que vos prières soient exaucées.
@@ -156,13 +152,11 @@
         </div>
       </aside>
 
-      <!-- Zone Principale : Saint Joseph -->
+      <!-- Zone Principale -->
       <main class="flex-grow w-full flex flex-col">
-        
         <section id="main-section" class="bg-card bg-white rounded-2xl p-6 md:p-10 shadow-sm border border-slate-200/80 transition-colors duration-500 relative flex flex-col justify-between h-full">
           
           <div class="flex flex-col h-full justify-between">
-            <!-- Titre centré -->
             <div class="flex flex-col items-center border-0">
               <h2 class="font-opensans-bold text-2xl md:text-4xl text-slate-900 text-royal mb-4 tracking-tight text-center m-0 p-0 border-0">
                 Saint Joseph
@@ -179,88 +173,63 @@
                   class="w-full h-full object-cover rounded-xl transition-transform duration-500"
                 />
 
-                <!-- Pastille interactive 1 (Jaune pure) -->
+                <!-- Pastille 1 -->
                 <button onclick="openModal('dates')" class="absolute top-1/4 left-1/4 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-amber-500 hover:bg-amber-400 shadow-lg animate-pulse transition hover:scale-110 active:scale-95 cursor-pointer">
                 </button>
 
-                <!-- Pastille interactive 2 (Bleue pure) -->
+                <!-- Pastille 2 -->
                 <button onclick="openModal('titles')" class="absolute top-1/3 right-1/4 transform translate-x-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-blue-600 hover:bg-blue-500 shadow-lg animate-pulse transition hover:scale-110 active:scale-95 cursor-pointer">
                 </button>
 
-                <!-- Pastille interactive 3 (Rouge pure) -->
+                <!-- Pastille 3 -->
                 <button onclick="openModal('chaste-heart')" class="absolute top-[52%] right-[25%] transform translate-x-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-red-700 hover:bg-red-600 shadow-lg animate-pulse transition hover:scale-110 active:scale-95 cursor-pointer">
                 </button>
               </div>
 
-              <!-- Pastille interactive 4 (Vert émeraude - BibleWalks Nazareth Maps) -->
-              <button onclick="window.open('https://www.biblewalks.com/nazareth_maps/', '_blank')" title="Cartes et sites de Nazareth (BibleWalks)" class="absolute top-[65%] left-1/4 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-emerald-600 hover:bg-emerald-500 shadow-lg animate-pulse transition hover:scale-110 active:scale-95 cursor-pointer">
+              <!-- Pastille 4 -->
+              <button onclick="window.open('https://www.biblewalks.com/nazareth_maps/', '_blank')" title="Cartes et sites de Nazareth" class="absolute top-[65%] left-1/4 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-emerald-600 hover:bg-emerald-500 shadow-lg animate-pulse transition hover:scale-110 active:scale-95 cursor-pointer">
               </button>
 
               <p class="text-[11px] text-slate-400 mt-2 italic text-center">
                 Source : Object Lesson: St. Joseph and the Christ Child — NOMA
-                  </p>
+              </p>
             </div>
           </div>
 
-          <!-- Modale / Panneau Superposé -->
+          <!-- Modale -->
           <div id="interactive-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-slate-950/60 backdrop-blur-sm p-4">
             <div id="modal-container" class="bg-white rounded-2xl max-w-2xl w-full p-6 md:p-8 shadow-2xl border border-amber-200 relative animate-in fade-in zoom-in duration-200 max-h-[90vh] overflow-y-auto">
-              
-              <!-- Bouton de fermeture -->
               <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 p-2 rounded-lg text-lg font-bold cursor-pointer">
                 ✕
               </button>
-
-              <!-- Contenu dynamique interactif -->
-              <div id="modal-content" class="space-y-4">
-                <!-- Rempli dynamiquement par JS -->
-              </div>
-
+              <div id="modal-content" class="space-y-4"></div>
             </div>
           </div>
 
         </section>
-
       </main>
 
     </div>
 
-    <!-- Bloc superposé Nazareth -->
+    <!-- Bloc Nazareth -->
     <div class="relative z-10 -mb-6 flex justify-center px-4">
       <div class="inline-flex items-center gap-4 rounded-xl border border-amber-200/60 bg-white/95 px-6 py-3 shadow-md backdrop-blur-sm text-lg font-opensans-bold text-slate-800">
         <span class="text-slate-500 font-normal">Nazareth :</span>
-        <a 
-          href="https://artsandculture.google.com/entity/nazareth/m05fz3?hl=fr" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          class="hover:text-amber-700 hover:underline transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500 rounded"
-          aria-label="Découvrir la fiche Nazareth sur Google Arts & Culture (s'ouvre dans un nouvel onglet)"
-        >
-          Découvrir
-        </a>
-        <span class="text-slate-300" aria-hidden="true">•</span>
-        <a 
-          href="https://artsandculture.google.com/search?q=Nazareth&hl=fr" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          class="hover:text-amber-700 hover:underline transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500 rounded"
-          aria-label="Explorer la galerie d'images Nazareth sur Google Arts & Culture (s'ouvre dans un nouvel onglet)"
-        >
-          Galerie
-        </a>
+        <a href="https://artsandculture.google.com/entity/nazareth/m05fz3?hl=fr" target="_blank" rel="noopener noreferrer" class="hover:text-amber-700 hover:underline transition-colors rounded">Découvrir</a>
+        <span class="text-slate-300">•</span>
+        <a href="https://artsandculture.google.com/search?q=Nazareth&hl=fr" target="_blank" rel="noopener noreferrer" class="hover:text-amber-700 hover:underline transition-colors rounded">Galerie</a>
       </div>
     </div>
 
-    <!-- Pied de Page Épuré - Centré -->
+    <!-- Pied de Page -->
     <footer class="w-full text-center py-6 text-xs text-slate-400 border-t border-slate-200/60 bg-white">
       <small>&copy; 2026 Sous le manteau de Saint Joseph. Tous droits réservés.</small>
     </footer>
 
   </div>
 
-  <!-- Audio API & Interactivité -->
+  <!-- Scripts -->
   <script>
-    // --- GESTION DE LA SAUVEGARDE ET VÉRIFICATION DE LA NEUVAINE ---
     document.addEventListener("DOMContentLoaded", () => {
       renderNeuvaine();
     });
@@ -344,7 +313,6 @@
       if (audioCtx.state === 'suspended') {
         audioCtx.resume();
       }
-
       isPlayingDove = true;
       document.getElementById('dove-btn').classList.add('bg-amber-600', 'ring-2', 'ring-amber-300');
 
@@ -358,16 +326,13 @@
 
     function playPureNote() {
       if (!audioCtx || !isPlayingDove) return;
-
       const osc = audioCtx.createOscillator();
       const gain = audioCtx.createGain();
-
       const notes = [523.25, 659.25, 783.99, 880.00, 1046.50];
       const randomFreq = notes[Math.floor(Math.random() * notes.length)];
 
       osc.type = 'sine';
       const now = audioCtx.currentTime;
-
       osc.frequency.setValueAtTime(randomFreq, now);
 
       gain.gain.setValueAtTime(0.001, now);
@@ -376,16 +341,13 @@
 
       osc.connect(gain);
       gain.connect(audioCtx.destination);
-
       osc.start(now);
       osc.stop(now + 3.0);
     }
 
     function stopDoveSound() {
       isPlayingDove = false;
-      if (melodyInterval) {
-        clearInterval(melodyInterval);
-      }
+      if (melodyInterval) clearInterval(melodyInterval);
       document.getElementById('dove-btn').classList.remove('bg-amber-600', 'ring-2', 'ring-amber-300');
     }
 
@@ -455,7 +417,7 @@
           <div class="text-sm text-slate-700 leading-relaxed italic bg-blue-600/10 p-4 rounded-xl border border-blue-600/20 mb-4 space-y-2">
             <p>Je vous salue Joseph,</p>
             <p>Vous que la grâce divine a comblé ;</p>
-            <p>le Sauveur a reposé dans vos bras et grandi sous vos yeux. ;</p>
+            <p>le Sauveur a reposé dans vos bras et grandi sous vos yeux.</p>
             <p>Vous êtes béni entre tous les hommes et Jésus,</p>
             <p>l’Enfant divin de votre virginale Épouse est béni.</p>
             <p>Saint Joseph, donné pour père au Fils de Dieu,</p>
@@ -477,8 +439,7 @@
             <span class="text-xs font-bold text-red-700 uppercase">1er Mai</span>
           </div>
           <div class="text-sm text-slate-700 leading-relaxed italic bg-blue-600/10 p-4 rounded-xl border border-blue-600/20 mb-4 space-y-3">
-            <p>Glorieux saint Joseph, modèle de tous ceux qui sont voués au travail, obtenez-moi la grâce de travailler 
-            en esprit de pénitence pour l’expiation de mes nombreux péchés ;</p>
+            <p>Glorieux saint Joseph, modèle de tous ceux qui sont voués au travail, obtenez-moi la grâce de travailler en esprit de pénitence pour l’expiation de mes nombreux péchés ;</p>
             <p>de travailler en conscience, mettant le culte du devoir au-dessus de mes inclinations ;</p>
             <p>de travailler avec reconnaissance et joie, regardant comme un honneur d’employer et de développer par le travail les dons reçus de Dieu ;</p>
             <p>de travailler avec ordre, paix, modération et patience, sans jamais reculer devant la lassitude et les difficultés ;</p>
@@ -499,4 +460,4 @@
     }
   </script>
 </body>
-</html>         
+</html>
