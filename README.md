@@ -1,4 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full bg-slate-50">
+<head>
+  <meta charset="UTF-8"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Sous le manteau de Saint Joseph</title>
 
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Open Sans (Normale & Grasse) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .font-opensans-bold {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 700;
+    }
+
+    /* Suppression absolue de toutes les bordures et soulignements sous les titres */
+    h1, h2, h3, h4, h5, h6 {
+      border: none !important;
+      border-bottom: none !important;
+      outline: none !important;
+      text-decoration: none !important;
+      box-shadow: none !important;
+    }
+
+    /* Lumière apaisante (Mode Sombre Argent/Bleu Nuit) */
+    .soothing-mode {
+      background-color: #0f172a !important;
+      color: #f8fafc !important;
+    }
+    .soothing-mode .bg-card {
+      background-color: #1e293b !important;
+      border-color: #334155 !important;
+      color: #f8fafc !important;
+    }
+    .soothing-mode .header-bg {
+      background-color: #020617 !important;
+    }
+    .soothing-mode .text-royal {
+      color: #93c5fd !important;
+    }
     .soothing-mode .border-silver {
       border-color: #334155 !important;
     }
@@ -25,7 +75,7 @@
 <body class="bg-[#f3eee4] text-slate-800 font-['Open_Sans'] min-h-screen flex flex-col bg-cover bg-center bg-no-repeat bg-fixed transition-colors duration-500" style="background-image: url('ElevenLabs_image_seedream-4_Une texture dou_2026-11-03T22_07_03.jpg');">
 
   <div id="app" class="min-h-screen flex flex-col justify-between">
-    
+
     <!-- En-tête Fixe en haut de page (non collant) -->
     <header class="header-bg bg-custom-blue text-white shadow-md w-full border-0">
       <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between border-0">
@@ -228,7 +278,7 @@
       if (audioCtx.state === 'suspended') {
         audioCtx.resume();
       }
-      
+
       isPlayingDove = true;
       document.getElementById('dove-btn').classList.add('bg-amber-600', 'ring-2', 'ring-amber-300');
 
@@ -251,7 +301,7 @@
 
       osc.type = 'sine';
       const now = audioCtx.currentTime;
-      
+
       osc.frequency.setValueAtTime(randomFreq, now);
 
       gain.gain.setValueAtTime(0.001, now);
@@ -281,9 +331,9 @@
       const modal = document.getElementById('interactive-modal');
       const container = document.getElementById('modal-container');
       const content = document.getElementById('modal-content');
-      
+
       container.style.maxHeight = '90vh';
-      
+
       if (type === 'dates') {
         content.innerHTML = `
           <div class="space-y-3">
@@ -321,13 +371,13 @@
           </div>
         `;
       }
-      
+
       modal.classList.remove('hidden');
     }
 
     function showPrayer(prayerKey) {
       const content = document.getElementById('modal-content');
-      
+
       if (prayerKey === 'ave-joseph') {
         content.innerHTML = `
           <div class="flex items-center justify-between mb-4 pb-2">
@@ -384,5 +434,3 @@
   </script>
 </body>
 </html>
-
-
