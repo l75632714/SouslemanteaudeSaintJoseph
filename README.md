@@ -127,7 +127,7 @@
             <div id="neuvaine-list" class="space-y-2.5"></div>
           </div>
 
-          <!-- Message de fin de neuvaine exact -->
+          <!-- Message de fin de neuvaine exact (affiché automatiquement quand les 9 jours sont cochés) -->
           <div id="neuvaine-completion-msg" class="hidden mt-6 pt-4 border-t border-amber-200/60 text-center">
             <p class="text-xs font-opensans-bold text-amber-700 italic">
               Que vos prières soient exaucées.
