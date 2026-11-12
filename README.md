@@ -1,53 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr" class="h-full bg-slate-50">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>Sous le manteau de Saint Joseph</title>
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Google Fonts: Open Sans (Normale & Grasse) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      font-family: 'Open Sans', sans-serif;
-      -webkit-tap-highlight-color: transparent;
-    }
-    .font-opensans-bold {
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 700;
-    }
-
-    /* Suppression absolue de toutes les bordures et soulignements sous les titres */
-    h1, h2, h3, h4, h5, h6 {
-      border: none !important;
-      border-bottom: none !important;
-      outline: none !important;
-      text-decoration: none !important;
-      box-shadow: none !important;
-    }
-
-    /* Lumière apaisante (Mode Sombre Argent/Bleu Nuit) */
-    .soothing-mode {
-      background-color: #0f172a !important;
-      color: #f8fafc !important;
-    }
-    .soothing-mode .bg-card {
-      background-color: #1e293b !important;
-      border-color: #334155 !important;
-      color: #f8fafc !important;
-    }
-    .soothing-mode .header-bg {
-      background-color: #020617 !important;
-    }
-    .soothing-mode .text-royal {
-      color: #93c5fd !important;
-    }
     .soothing-mode .border-silver {
       border-color: #334155 !important;
     }
@@ -74,13 +25,6 @@
 <body class="bg-[#f3eee4] text-slate-800 font-['Open_Sans'] min-h-screen flex flex-col bg-cover bg-center bg-no-repeat bg-fixed transition-colors duration-500" style="background-image: url('ElevenLabs_image_seedream-4_Une texture dou_2026-11-03T22_07_03.jpg');">
 
   <div id="app" class="min-h-screen flex flex-col justify-between">
-    
-<!-- SECONDE ILLUSTRATION -->
-<section class="relative w-full bg-slate-800 rounded-2xl border border-slate-700 shadow-xl overflow-hidden p-4 space-y-3">
-  <div class="relative w-full bg-black touch-none">
-<img src="sketch1793913958083.png" alt="sketch1793913958083.png" class="absolute top-4 left-4 w-full h-auto rounded-xl shadow-lg" select-none z-10">
-  </div>
-</section>
     
     <!-- En-tête Fixe en haut de page (non collant) -->
     <header class="header-bg bg-custom-blue text-white shadow-md w-full border-0">
@@ -440,3 +384,5 @@
   </script>
 </body>
 </html>
+
+
