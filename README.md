@@ -72,11 +72,11 @@
 </head>
 <body class="bg-slate-800 text-slate-800 font-['Open_Sans'] min-h-screen flex flex-col relative transition-colors duration-500">
 
-  <!-- Option 1 : Superposition des deux illustrations en arrière-plan global -->
-  <div class="fixed inset-0 z-0 pointer-events-none">
+  <!-- Option 1 : Superposition correcte et robuste des deux illustrations en arrière-plan -->
+  <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
     <!-- Première illustration (le papier en fond) -->
-    <img src="ElevenLabs_image_seedream-4_Une texture dou_2026-11-03T22_07_03.jpg" alt="Fond papier" class="w-full h-full object-cover select-none">
-    <!-- Seconde illustration (le dessin fait main par-dessus avec le nom exact) -->
+    <img src="ElevenLabs_image_seedream-4_Une texture dou_2026-11-03T22_07_03.jpg" alt="Fond papier" class="absolute inset-0 w-full h-full object-cover select-none">
+    <!-- Seconde illustration (le dessin fait main par-dessus) -->
     <img src="Sketch1793913958083allrightsreservedtoLouiseÉmilieSchreiber.png" alt="Dessin superposé" class="absolute inset-0 w-full h-full object-cover select-none">
   </div>
 
