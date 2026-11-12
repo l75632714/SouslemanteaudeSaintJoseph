@@ -23,7 +23,6 @@
       font-weight: 700;
     }
 
-    /* Suppression absolue de toutes les bordures et soulignements sous les titres */
     h1, h2, h3, h4, h5, h6 {
       border: none !important;
       border-bottom: none !important;
@@ -32,7 +31,6 @@
       box-shadow: none !important;
     }
 
-    /* Lumière apaisante (Mode Sombre Argent/Bleu Nuit) */
     .soothing-mode {
       background-color: #0f172a !important;
       color: #f8fafc !important;
@@ -52,7 +50,6 @@
       border-color: #334155 !important;
     }
 
-    /* Halo interactif au survol de Saint Joseph */
     .halo-effect {
       box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
       transition: all 0.5s ease;
@@ -72,7 +69,7 @@
 </head>
 <body class="bg-slate-800 text-slate-800 font-['Open_Sans'] min-h-screen flex flex-col relative transition-colors duration-500">
 
-  <!-- Arrière-plan global -->
+  <!-- Arrière-plan global : Illustration unique -->
   <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
     <img src="Sketch1793913958083allrightsreservedtoLouiseÉmilieSchreiber.png" alt="Arrière-plan dessin" class="absolute inset-0 w-full h-full object-cover select-none">
   </div>
@@ -83,7 +80,6 @@
     <header class="header-bg bg-custom-blue text-white shadow-md w-full border-0">
       <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between border-0">
         
-        <!-- Zone Gauche : Icônes -->
         <div class="flex items-center space-x-2">
           <!-- Bouton Musique -->
           <button id="dove-btn" onclick="toggleDoveSound()" title="Ambiance Musicale" class="p-1.5 rounded-full bg-black hover:bg-slate-800 text-white transition cursor-pointer flex items-center justify-center active:scale-95">
@@ -108,7 +104,6 @@
           </button>
         </div>
 
-        <!-- Titre centré -->
         <h1 class="text-lg md:text-2xl tracking-wide text-amber-400 text-center m-0 p-0 border-0 flex-1 font-opensans-bold">
           Sous le manteau de Saint Joseph
         </h1>
@@ -225,7 +220,7 @@
 
   </div>
 
-  <!-- Scripts corrigés -->
+  <!-- Scripts -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       renderNeuvaine();
@@ -257,7 +252,6 @@
         container.appendChild(label);
       }
 
-      // Vérification immédiate au chargement de la page
       checkCompletion();
     }
 
@@ -423,7 +417,7 @@
         content.innerHTML = `
           <div class="flex items-center justify-between mb-4 pb-2">
             <button onclick="openModal('dates')" class="text-xs font-bold text-red-700 hover:text-red-800 flex items-center gap-1 cursor-pointer">
-              ← Retour
+               ← Retour
             </button>
             <span class="text-xs font-bold text-red-700 uppercase">1er Mai</span>
           </div>
@@ -432,7 +426,7 @@
             <p>de travailler en conscience, mettant le culte du devoir au-dessus de mes inclinations ;</p>
             <p>de travailler avec reconnaissance et joie, regardant comme un honneur d’employer et de développer par le travail les dons reçus de Dieu ;</p>
             <p>de travailler avec ordre, paix, modération et patience, sans jamais reculer devant la lassitude et les difficultés ;</p>
-            <p>de travailler surtout avec pureté d’intention et avec détachement de moi-même ayant sans cesse devant les  <p>de travailler surtout avec pureté d’intention et avec détachement de moi-même ayant sans cesse devant les yeux la mort et le compte que je devrai rendre du temps perdu, des talents inutilisés, du bien omis et des vaines complaisances dans le succès, si funeste à l’œuvre de Dieu.</p>
+            <p>de travailler surtout avec pureté d’intention et avec détachement de moi-même ayant sans cesse devant les yeux la mort et le compte que je devrai rendre du temps perdu, des talents inutilisés, du bien omis et des vaines complaisances dans le succès, si funeste à l’œuvre de Dieu.</p>
             <p>Tout pour Jésus, tout pour Marie, tout à votre imitation, patriarche Joseph ! telle sera ma devise à la vie à la mort. Ainsi soit-il</p>
           </div>
           <div class="text-[11px] text-slate-400 border-t border-slate-100 pt-3 text-center">
