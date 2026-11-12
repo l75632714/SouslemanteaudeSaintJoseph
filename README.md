@@ -147,15 +147,13 @@
               </h2>
             </div>
 
-            <!-- Conteneur avec uniquement votre illustration personnelle et les pastilles interactives -->
+            <!-- Conteneur avec le tableau principal de NOMA et les pastilles interactives -->
             <div class="halo-container max-w-md mx-auto relative flex flex-col items-center w-full flex-grow justify-center">
               
               <div class="relative rounded-2xl overflow-hidden halo-effect border-2 border-amber-400/40 p-1 bg-slate-900 w-full flex justify-center h-full max-h-[580px]">
-                
-                <!-- Votre dessin personnel affiché directement ici -->
                 <img 
-                  src="sketch1793913958083allrightsreservedtoLouiseÉmilieSchreiber.png" 
-                  alt="Saint Joseph - Dessin personnel" 
+                  src="https://noma.org/wp-content/uploads/2018/01/56-63-old.jpg" 
+                  alt="Saint Joseph et l'Enfant-Jésus" 
                   class="w-full h-full object-cover rounded-xl transition-transform duration-500"
                 />
 
@@ -172,6 +170,10 @@
 
               <button onclick="window.open('https://www.biblewalks.com/nazareth_maps/', '_blank')" title="Cartes et sites de Nazareth (BibleWalks)" class="absolute top-[65%] left-1/4 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-emerald-600 hover:bg-emerald-500 shadow-lg animate-pulse transition hover:scale-110 active:scale-95 cursor-pointer">
               </button>
+
+              <p class="text-[11px] text-slate-400 mt-2 italic text-center">
+                Source : Object Lesson: St. Joseph and the Christ Child — NOMA
+              </p>
             </div>
           </div>
 
