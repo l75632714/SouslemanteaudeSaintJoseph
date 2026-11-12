@@ -71,15 +71,14 @@
     }
   </style>
 </head>
-<body class="bg-[#f3eee4] text-slate-800 font-['Open_Sans'] min-h-screen flex flex-col bg-cover bg-center bg-no-repeat bg-fixed transition-colors duration-500" style="background-image: url('ElevenLabs_image_seedream-4_Une texture dou_2026-11-03T22_07_03.jpg');">
+<body class="bg-slate-800 text-slate-800 font-['Open_Sans'] min-h-screen flex flex-col relative transition-colors duration-500">
 
-  <!-- Illustration faite main superposée à l'image de fond générale -->
+  <!-- Superposition des deux illustrations en arrière-plan global -->
   <div class="fixed inset-0 z-0 pointer-events-none">
-    <img 
-      src="sketch1793913958083.png" 
-      alt="Illustration dessinée à la main" 
-      class="w-full h-full object-cover select-none"
-    />
+    <!-- Première illustration (le papier en fond) -->
+    <img src="ElevenLabs_image_seedream-4_Une texture dou_2026-11-03T22_07_03.jpg" alt="Fond papier" class="w-full h-full object-cover select-none">
+    <!-- Seconde illustration (le dessin fait main par-dessus) -->
+    <img src="sketch1793913958083.png" alt="Dessin superposé" class="absolute inset-0 w-full h-full object-cover select-none">
   </div>
 
   <div id="app" class="relative z-10 min-h-screen flex flex-col justify-between">
