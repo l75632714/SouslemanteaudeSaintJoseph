@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html lang="fr" class="h-full bg-slate-50">
+<html lang="fr" class="h-full">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Sous le manteau de Saint Joseph</title>
 
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Google Fonts: Open Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -22,7 +20,6 @@
       font-family: 'Open Sans', sans-serif;
       font-weight: 700;
     }
-
     h1, h2, h3, h4, h5, h6 {
       border: none !important;
       border-bottom: none !important;
@@ -30,26 +27,6 @@
       text-decoration: none !important;
       box-shadow: none !important;
     }
-
-    .soothing-mode {
-      background-color: #0f172a !important;
-      color: #f8fafc !important;
-    }
-    .soothing-mode .bg-card {
-      background-color: #1e293b !important;
-      border-color: #334155 !important;
-      color: #f8fafc !important;
-    }
-    .soothing-mode .header-bg {
-      background-color: #020617 !important;
-    }
-    .soothing-mode .text-royal {
-      color: #93c5fd !important;
-    }
-    .soothing-mode .border-silver {
-      border-color: #334155 !important;
-    }
-
     .halo-effect {
       box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
       transition: all 0.5s ease;
@@ -58,58 +35,25 @@
       box-shadow: 0 0 35px rgba(212, 175, 55, 0.65);
       transform: scale(1.01);
     }
-
-    .bg-custom-blue {
-      background-color: #2563eb;
-    }
-    .soothing-mode .bg-custom-blue {
-      background-color: #1e293b !important;
-    }
   </style>
 </head>
-<body class="bg-slate-800 text-slate-800 font-['Open_Sans'] min-h-screen flex flex-col relative transition-colors duration-500">
+<body class="bg-slate-900 text-slate-800 min-h-screen flex flex-col relative">
 
-  <!-- Arrière-plan global : Illustration unique -->
-  <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
-    <img src="Sketch1793913958083allrightsreservedtoLouiseÉmilieSchreiber.png" alt="Arrière-plan dessin" class="absolute inset-0 w-full h-full object-cover select-none">
+  <!-- Arrière-plan global corrigé : z-index négatif et affichage forcé -->
+  <div style="position: fixed; inset: 0; z-index: -10; pointer-events: none; overflow: hidden;">
+    <img src="Sketch1793913958083allrightsreservedtoLouiseÉmilieSchreiber.png" alt="Arrière-plan dessin" style="width: 100%; height: 100%; object-fit: cover; -webkit-user-select: none; user-select: none;">
   </div>
 
-  <div id="app" class="relative z-10 min-h-screen flex flex-col justify-between">
+  <div class="relative z-10 min-h-screen flex flex-col justify-between">
 
-    <!-- En-tête Fixe -->
-    <header class="header-bg bg-custom-blue text-white shadow-md w-full border-0">
-      <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between border-0">
-        
-        <div class="flex items-center space-x-2">
-          <!-- Bouton Musique -->
-          <button id="dove-btn" onclick="toggleDoveSound()" title="Ambiance Musicale" class="p-1.5 rounded-full bg-black hover:bg-slate-800 text-white transition cursor-pointer flex items-center justify-center active:scale-95">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
-            </svg>
-          </button>
-
-          <!-- Bouton Lumière Apaisante -->
-          <button id="light-btn" onclick="toggleSoothingLight()" title="Lumière apaisante" class="p-1.5 rounded-full bg-black hover:bg-slate-800 text-white transition cursor-pointer flex items-center justify-center active:scale-95">
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="4"/>
-              <path d="M12 2v2"/>
-              <path d="M12 20v2"/>
-              <path d="m4.93 4.93 1.41 1.41"/>
-              <path d="m17.66 17.66 1.41 1.41"/>
-              <path d="M2 12h2"/>
-              <path d="M20 12h2"/>
-              <path d="m6.34 17.66-1.41 1.41"/>
-              <path d="m19.07 4.93-1.41 1.41"/>
-            </svg>
-          </button>
-        </div>
-
-        <h1 class="text-lg md:text-2xl tracking-wide text-amber-400 text-center m-0 p-0 border-0 flex-1 font-opensans-bold">
+    <!-- En-tête -->
+    <header class="bg-blue-600 text-white shadow-md w-full">
+      <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+        <div class="w-10"></div>
+        <h1 class="text-lg md:text-2xl tracking-wide text-amber-400 text-center font-opensans-bold m-0 p-0">
           Sous le manteau de Saint Joseph
         </h1>
-
-        <div class="w-14"></div>
-
+        <div class="w-10"></div>
       </div>
     </header>
 
@@ -118,24 +62,21 @@
       
       <!-- Panneau Latéral Gauche : Neuvaine -->
       <aside class="w-full md:w-72 flex-shrink-0 flex flex-col">
-        <div id="neuvaine-panel" class="bg-card bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80 transition-colors duration-500 h-full flex flex-col justify-between">
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80 h-full flex flex-col justify-between">
           <div>
-            <div class="mb-6 flex flex-col items-start text-left border-0">
-              <h2 class="font-opensans-bold text-slate-900 text-royal mb-1 m-0 p-0 border-0" style="font-size: 18px !important;">
+            <div class="mb-6 flex flex-col items-start text-left">
+              <h2 class="font-opensans-bold text-slate-900 text-lg mb-1">
                 Neuvaine à Saint Joseph
               </h2>
-              <p class="text-xs text-slate-500 italic m-0 p-0 border-0">
+              <p class="text-xs text-slate-500 italic">
                 Suivez l'avancement de votre neuvaine :
               </p>
             </div>
 
-            <!-- Liste des 9 jours -->
-            <div id="neuvaine-list" class="space-y-2.5">
-              <!-- Rempli par JavaScript -->
-            </div>
+            <div id="neuvaine-list" class="space-y-2.5"></div>
           </div>
 
-          <!-- Message de fin de neuvaine exact -->
+          <!-- Message de fin de neuvaine -->
           <div id="neuvaine-completion-msg" class="hidden mt-6 pt-4 border-t border-amber-200/60 text-center">
             <p class="text-xs font-opensans-bold text-amber-700 italic">
               Que vos prières soient exaucées.
@@ -146,40 +87,35 @@
 
       <!-- Zone Principale -->
       <main class="flex-grow w-full flex flex-col">
-        <section id="main-section" class="bg-card bg-white rounded-2xl p-6 md:p-10 shadow-sm border border-slate-200/80 transition-colors duration-500 relative flex flex-col justify-between h-full">
+        <section class="bg-white rounded-2xl p-6 md:p-10 shadow-sm border border-slate-200/80 relative flex flex-col justify-between h-full">
           
           <div class="flex flex-col h-full justify-between">
-            <div class="flex flex-col items-center border-0">
-              <h2 class="font-opensans-bold text-2xl md:text-4xl text-slate-900 text-royal mb-4 tracking-tight text-center m-0 p-0 border-0">
+            <div class="flex flex-col items-center">
+              <h2 class="font-opensans-bold text-2xl md:text-4xl text-slate-900 mb-4 tracking-tight text-center">
                 Saint Joseph
               </h2>
             </div>
 
-            <!-- Conteneur de l'image -->
             <div class="halo-container max-w-md mx-auto relative flex flex-col items-center w-full flex-grow justify-center">
               
               <div class="relative rounded-2xl overflow-hidden halo-effect border-2 border-amber-400/40 p-1 bg-slate-900 w-full flex justify-center h-full max-h-[580px]">
                 <img 
                   src="https://noma.org/wp-content/uploads/2018/01/56-63-old.jpg" 
                   alt="Saint Joseph et l'Enfant-Jésus" 
-                  class="w-full h-full object-cover rounded-xl transition-transform duration-500"
+                  class="w-full h-full object-cover rounded-xl"
                 />
 
-                <!-- Pastille 1 -->
-                <button onclick="openModal('dates')" class="absolute top-1/4 left-1/4 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-amber-500 hover:bg-amber-400 shadow-lg animate-pulse transition hover:scale-110 active:scale-95 cursor-pointer">
+                <button onclick="openModal('dates')" class="absolute top-1/4 left-1/4 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-amber-500 hover:bg-amber-400 shadow-lg animate-pulse cursor-pointer">
                 </button>
 
-                <!-- Pastille 2 -->
-                <button onclick="openModal('titles')" class="absolute top-1/3 right-1/4 transform translate-x-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-blue-600 hover:bg-blue-500 shadow-lg animate-pulse transition hover:scale-110 active:scale-95 cursor-pointer">
+                <button onclick="openModal('titles')" class="absolute top-1/3 right-1/4 transform translate-x-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-blue-600 hover:bg-blue-500 shadow-lg animate-pulse cursor-pointer">
                 </button>
 
-                <!-- Pastille 3 -->
-                <button onclick="openModal('chaste-heart')" class="absolute top-[52%] right-[25%] transform translate-x-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-red-700 hover:bg-red-600 shadow-lg animate-pulse transition hover:scale-110 active:scale-95 cursor-pointer">
+                <button onclick="openModal('chaste-heart')" class="absolute top-[52%] right-[25%] transform translate-x-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-red-700 hover:bg-red-600 shadow-lg animate-pulse cursor-pointer">
                 </button>
               </div>
 
-              <!-- Pastille 4 -->
-              <button onclick="window.open('https://www.biblewalks.com/nazareth_maps/', '_blank')" title="Cartes et sites de Nazareth" class="absolute top-[65%] left-1/4 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-emerald-600 hover:bg-emerald-500 shadow-lg animate-pulse transition hover:scale-110 active:scale-95 cursor-pointer">
+              <button onclick="window.open('https://www.biblewalks.com/nazareth_maps/', '_blank')" title="Cartes et sites de Nazareth" class="absolute top-[65%] left-1/4 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-emerald-600 hover:bg-emerald-500 shadow-lg animate-pulse cursor-pointer">
               </button>
 
               <p class="text-[11px] text-slate-400 mt-2 italic text-center">
@@ -190,7 +126,7 @@
 
           <!-- Modale -->
           <div id="interactive-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-slate-950/60 backdrop-blur-sm p-4">
-            <div id="modal-container" class="bg-white rounded-2xl max-w-2xl w-full p-6 md:p-8 shadow-2xl border border-amber-200 relative animate-in fade-in zoom-in duration-200 max-h-[90vh] overflow-y-auto">
+            <div id="modal-container" class="bg-white rounded-2xl max-w-2xl w-full p-6 md:p-8 shadow-2xl border border-amber-200 relative max-h-[90vh] overflow-y-auto">
               <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 p-2 rounded-lg text-lg font-bold cursor-pointer">
                 ✕
               </button>
@@ -273,71 +209,6 @@
       }
     }
 
-    let audioCtx = null;
-    let isPlayingDove = false;
-    let melodyInterval = null;
-
-    function initAudio() {
-      if (!audioCtx) {
-        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-      }
-    }
-
-    function toggleDoveSound() {
-      initAudio();
-      if (isPlayingDove) {
-        stopDoveSound();
-      } else {
-        startDoveSound();
-      }
-    }
-
-    function startDoveSound() {
-      if (audioCtx.state === 'suspended') {
-        audioCtx.resume();
-      }
-      isPlayingDove = true;
-      document.getElementById('dove-btn').classList.add('bg-amber-600', 'ring-2', 'ring-amber-300');
-
-      playPureNote();
-      melodyInterval = setInterval(() => {
-        if (isPlayingDove) {
-          playPureNote();
-        }
-      }, 4000);
-    }
-
-    function playPureNote() {
-      if (!audioCtx || !isPlayingDove) return;
-      const osc = audioCtx.createOscillator();
-      const gain = audioCtx.createGain();
-      const notes = [523.25, 659.25, 783.99, 880.00, 1046.50];
-      const randomFreq = notes[Math.floor(Math.random() * notes.length)];
-
-      osc.type = 'sine';
-      const now = audioCtx.currentTime;
-      osc.frequency.setValueAtTime(randomFreq, now);
-
-      gain.gain.setValueAtTime(0.001, now);
-      gain.gain.linearRampToValueAtTime(0.03, now + 0.3);
-      gain.gain.exponentialRampToValueAtTime(0.0001, now + 3.0);
-
-      osc.connect(gain);
-      gain.connect(audioCtx.destination);
-      osc.start(now);
-      osc.stop(now + 3.0);
-    }
-
-    function stopDoveSound() {
-      isPlayingDove = false;
-      if (melodyInterval) clearInterval(melodyInterval);
-      document.getElementById('dove-btn').classList.remove('bg-amber-600', 'ring-2', 'ring-amber-300');
-    }
-
-    function toggleSoothingLight() {
-      document.body.classList.toggle('soothing-mode');
-    }
-
     function openModal(type) {
       const modal = document.getElementById('interactive-modal');
       const container = document.getElementById('modal-container');
@@ -364,8 +235,8 @@
         `;
       } else if (type === 'titles') {
         content.innerHTML = `
-          <div class="flex flex-col items-start justify-start text-left space-y-3 py-2 border-0">
-            <h3 class="font-opensans-bold text-2xl text-slate-900 mb-2 w-full text-left m-0 p-0 border-0">
+          <div class="flex flex-col items-start justify-start text-left space-y-3 py-2">
+            <h3 class="font-opensans-bold text-2xl text-slate-900 mb-2 w-full text-left">
               Saint Joseph
             </h3>
             <p class="text-base font-semibold text-slate-800 w-full text-left leading-normal m-0">Le Juste,</p>
@@ -417,7 +288,7 @@
         content.innerHTML = `
           <div class="flex items-center justify-between mb-4 pb-2">
             <button onclick="openModal('dates')" class="text-xs font-bold text-red-700 hover:text-red-800 flex items-center gap-1 cursor-pointer">
-               ← Retour
+              ← Retour
             </button>
             <span class="text-xs font-bold text-red-700 uppercase">1er Mai</span>
           </div>
