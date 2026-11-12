@@ -110,7 +110,7 @@
     <!-- Layout Principal -->
     <div class="max-w-7xl mx-auto px-4 md:px-6 py-8 flex-grow w-full flex flex-col md:flex-row gap-8 items-stretch">
       
-      <!-- Panneau Latéral Gauche : Neuvaine -->
+            <!-- Panneau Latéral Gauche : Neuvaine -->
       <aside class="w-full md:w-72 flex-shrink-0 flex flex-col">
         <div id="neuvaine-panel" class="bg-card bg-white rounded-2xl p-6 shadow-sm border border-slate-200/80 transition-colors duration-500 h-full flex flex-col justify-between">
           <div>
@@ -122,21 +122,19 @@
                 Suivez l'avancement de votre neuvaine :
               </p>
             </div>
-
             <!-- Liste verticale des 9 jours -->
             <div id="neuvaine-list" class="space-y-2.5"></div>
           </div>
 
-          <!-- Message de fin de neuvaine exact (affiché automatiquement quand les 9 jours sont cochés) -->
-          <div id="neuvaine-completion-msg" class="hidden mt-6 pt-4 border-t border-amber-200/60 text-center">
+          <!-- Message de fin de neuvaine -->
+          <div id="neuvaine-completion-msg" class="mt-6 pt-4 border-t border-amber-200/60 text-center">
             <p class="text-xs font-opensans-bold text-amber-700 italic">
               Que vos prières soient exaucées.
             </p>
           </div>
         </div>
       </aside>
-
-      <!-- Zone Principale -->
+   <!-- Zone Principale -->
       <main class="flex-grow w-full flex flex-col">
         <section id="main-section" class="bg-card bg-white rounded-2xl p-6 md:p-10 shadow-sm border border-slate-200/80 transition-colors duration-500 relative flex flex-col justify-between h-full">
           
