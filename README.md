@@ -2,7 +2,6 @@
 <html lang="fr" class="h-full bg-slate-50">
 <head>
   <meta charset="UTF-8"/>
-  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Sous le manteau de Saint Joseph</title>
 
@@ -80,31 +79,30 @@
     <header class="header-bg bg-custom-blue text-white shadow-md w-full border-0">
       <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between border-0">
         
-<!-- Zone Gauche : Icônes blanc sur noir -->
-<div class="flex items-center space-x-2">
-  <!-- Bouton Musique (Haut-parleur) -->
-  <button id="dove-btn" onclick="toggleDoveSound()" title="Ambiance Musicale" class="p-1.5 rounded-full bg-black hover:bg-slate-800 text-white transition cursor-pointer flex items-center justify-center active:scale-95">
-    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
-    </svg>
-  </button>
+        <!-- Zone Gauche : Icônes blanc sur noir -->
+        <div class="flex items-center space-x-2">
+          <!-- Bouton Musique (Haut-parleur) -->
+          <button id="dove-btn" onclick="toggleDoveSound()" title="Ambiance Musicale" class="p-1.5 rounded-full bg-black hover:bg-slate-800 text-white transition cursor-pointer flex items-center justify-center active:scale-95">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
+            </svg>
+          </button>
 
-  <!-- Bouton Lumière Apaisante (Icône Soleil) -->
-  <button id="light-btn" onclick="toggleSoothingLight()" title="Lumière apaisante" class="p-1.5 rounded-full bg-black hover:bg-slate-800 text-white transition cursor-pointer flex items-center justify-center active:scale-95">
-    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <circle cx="12" cy="12" r="4"/>
-      <path d="M12 2v2"/>
-      <path d="M12 20v2"/>
-      <path d="m4.93 4.93 1.41 1.41"/>
-      <path d="m17.66 17.66 1.41 1.41"/>
-      <path d="M2 12h2"/>
-      <path d="M20 12h2"/>
-      <path d="m6.34 17.66-1.41 1.41"/>
-      <path d="m19.07 4.93-1.41 1.41"/>
-    </svg>
-  </button>
-</div>
-
+          <!-- Bouton Lumière Apaisante (Icône Soleil) -->
+          <button id="light-btn" onclick="toggleSoothingLight()" title="Lumière apaisante" class="p-1.5 rounded-full bg-black hover:bg-slate-800 text-white transition cursor-pointer flex items-center justify-center active:scale-95">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2v2"/>
+              <path d="M12 20v2"/>
+              <path d="m4.93 4.93 1.41 1.41"/>
+              <path d="m17.66 17.66 1.41 1.41"/>
+              <path d="M2 12h2"/>
+              <path d="M20 12h2"/>
+              <path d="m6.34 17.66-1.41 1.41"/>
+              <path d="m19.07 4.93-1.41 1.41"/>
+            </svg>
+          </button>
+        </div>
 
         <!-- Titre de l'application centré en jaune -->
         <h1 class="B612 Mono-Regular 400 text-lg md:text-2xl tracking-wide text-amber-400 text-center m-0 p-0 border-0 flex-1">
@@ -127,8 +125,8 @@
             <!-- Titre & Description alignés à gauche (Modifié en text-lg) -->
             <div class="mb-6 flex flex-col items-start text-left border-0">
               <h2 class="font-opensans-bold text-slate-900 text-royal mb-1 m-0 p-0 border-0 whitespace-nowrap" style="font-size: 18px !important;">
-  Neuvaine à Saint Joseph
-</h2>
+                Neuvaine à Saint Joseph
+              </h2>
 
               <p class="text-xs text-slate-500 italic m-0 p-0 border-0">
                 Suivez l'avancement de votre neuvaine :
@@ -169,28 +167,38 @@
             <div class="halo-container max-w-md mx-auto relative flex flex-col items-center w-full flex-grow justify-center">
               
               <div class="relative rounded-2xl overflow-hidden halo-effect border-2 border-amber-400/40 p-1 bg-slate-900 w-full flex justify-center h-full max-h-[580px]">
+                
+                <!-- Première illustration (fond de base) -->
                 <img 
                   src="https://noma.org/wp-content/uploads/2018/01/56-63-old.jpg" 
                   alt="Saint Joseph et l'Enfant-Jésus" 
-                  class="w-full h-full object-cover rounded-xl transition-transform duration-500"
+                  class="w-full h-full object-cover rounded-xl transition-transform duration-500 select-none"
+                />
+
+                <!-- Ton illustration faite main superposée par-dessus -->
+                <img 
+                  src="sketch1793913958083.png" 
+                  alt="Illustration dessinée à la main" 
+                  class="absolute inset-0 w-full h-full object-contain p-4 pointer-events-none select-none z-10"
                 />
 
                 <!-- Pastille interactive 1 (Jaune pure) -->
-                <button onclick="openModal('dates')" class="absolute top-1/4 left-1/4 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-amber-500 hover:bg-amber-400 shadow-lg animate-pulse transition hover:scale-110 active:scale-95">
+                <button onclick="openModal('dates')" class="absolute top-1/4 left-1/4 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-amber-500 hover:bg-amber-400 shadow-lg animate-pulse transition hover:scale-110 active:scale-95 z-20 cursor-pointer">
                 </button>
 
                 <!-- Pastille interactive 2 (Bleue pure) -->
-                <button onclick="openModal('titles')" class="absolute top-1/3 right-1/4 transform translate-x-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-blue-600 hover:bg-blue-500 shadow-lg animate-pulse transition hover:scale-110 active:scale-95">
+                <button onclick="openModal('titles')" class="absolute top-1/3 right-1/4 transform translate-x-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-blue-600 hover:bg-blue-500 shadow-lg animate-pulse transition hover:scale-110 active:scale-95 z-20 cursor-pointer">
                 </button>
 
                 <!-- Pastille interactive 3 (Rouge pure) -->
-                <button onclick="openModal('chaste-heart')" class="absolute top-[52%] right-[25%] transform translate-x-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-red-700 hover:bg-red-600 shadow-lg animate-pulse transition hover:scale-110 active:scale-95">
+                <button onclick="openModal('chaste-heart')" class="absolute top-[52%] right-[25%] transform translate-x-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-red-700 hover:bg-red-600 shadow-lg animate-pulse transition hover:scale-110 active:scale-95 z-20 cursor-pointer">
                 </button>
-              </div>
 
-              <!-- Pastille interactive 4 (Vert émeraude - BibleWalks Nazareth Maps) -->
-<button onclick="window.open('https://www.biblewalks.com/nazareth_maps/', '_blank')" title="Cartes et sites de Nazareth (BibleWalks)" class="absolute top-[65%] left-1/4 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-emerald-600 hover:bg-emerald-500 shadow-lg animate-pulse transition hover:scale-110 active:scale-95 cursor-pointer">
-</button>
+                <!-- Pastille interactive 4 (Vert émeraude - BibleWalks Nazareth Maps) -->
+                <button onclick="window.open('https://www.biblewalks.com/nazareth_maps/', '_blank')" title="Cartes et sites de Nazareth (BibleWalks)" class="absolute top-[65%] left-1/4 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-emerald-600 hover:bg-emerald-500 shadow-lg animate-pulse transition hover:scale-110 active:scale-95 z-20 cursor-pointer">
+                </button>
+
+              </div>
 
               <p class="text-[11px] text-slate-400 mt-2 italic text-center">
                 Source : Object Lesson: St. Joseph and the Christ Child — NOMA
@@ -220,31 +228,32 @@
       </main>
 
     </div>
-<!-- Bloc superposé Nazareth -->
-<div class="relative z-10 -mb-6 flex justify-center px-4">
-  <div class="inline-flex items-center gap-4 rounded-xl border border-amber-200/60 bg-white/95 px-6 py-3 shadow-md backdrop-blur-sm text-lg font-opensans-bold text-slate-800">
-    <span class="text-slate-500 font-normal">Nazareth :</span>
-    <a 
-      href="https://artsandculture.google.com/entity/nazareth/m05fz3?hl=fr" 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      class="hover:text-amber-700 hover:underline transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500 rounded"
-      aria-label="Découvrir la fiche Nazareth sur Google Arts & Culture (s'ouvre dans un nouvel onglet)"
-    >
-      Découvrir
-    </a>
-    <span class="text-slate-300" aria-hidden="true">•</span>
-    <a 
-      href="https://artsandculture.google.com/search?q=Nazareth&hl=fr" 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      class="hover:text-amber-700 hover:underline transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500 rounded"
-      aria-label="Explorer la galerie d'images Nazareth sur Google Arts & Culture (s'ouvre dans un nouvel onglet)"
-    >
-      Galerie
-    </a>
-  </div>
-</div>
+
+    <!-- Bloc superposé Nazareth -->
+    <div class="relative z-10 -mb-6 flex justify-center px-4">
+      <div class="inline-flex items-center gap-4 rounded-xl border border-amber-200/60 bg-white/95 px-6 py-3 shadow-md backdrop-blur-sm text-lg font-opensans-bold text-slate-800">
+        <span class="text-slate-500 font-normal">Nazareth :</span>
+        <a 
+          href="https://artsandculture.google.com/entity/nazareth/m05fz3?hl=fr" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="hover:text-amber-700 hover:underline transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500 rounded"
+          aria-label="Découvrir la fiche Nazareth sur Google Arts & Culture (s'ouvre dans un nouvel onglet)"
+        >
+          Découvrir
+        </a>
+        <span class="text-slate-300" aria-hidden="true">•</span>
+        <a 
+          href="https://artsandculture.google.com/search?q=Nazareth&hl=fr" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="hover:text-amber-700 hover:underline transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500 rounded"
+          aria-label="Explorer la galerie d'images Nazareth sur Google Arts & Culture (s'ouvre dans un nouvel onglet)"
+        >
+          Galerie
+        </a>
+      </div>
+    </div>
 
     <!-- Pied de Page Épuré - Centré -->
     <footer class="w-full text-center py-6 text-xs text-slate-400 border-t border-slate-200/60 bg-white">
