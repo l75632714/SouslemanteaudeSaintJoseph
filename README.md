@@ -23,7 +23,6 @@
       font-weight: 700;
     }
 
-    /* Suppression absolue de toutes les bordures et soulignements sous les titres */
     h1, h2, h3, h4, h5, h6 {
       border: none !important;
       border-bottom: none !important;
@@ -32,7 +31,6 @@
       box-shadow: none !important;
     }
 
-    /* Lumière apaisante (Mode Sombre Argent/Bleu Nuit) */
     .soothing-mode {
       background-color: #0f172a !important;
       color: #f8fafc !important;
@@ -52,7 +50,6 @@
       border-color: #334155 !important;
     }
 
-    /* Halo interactif au survol de Saint Joseph */
     .halo-effect {
       box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
       transition: all 0.5s ease;
@@ -72,12 +69,9 @@
 </head>
 <body class="bg-slate-800 text-slate-800 font-['Open_Sans'] min-h-screen flex flex-col relative transition-colors duration-500">
 
-  <!-- Option 1 : Superposition correcte et robuste des deux illustrations en arrière-plan -->
+  <!-- Option 2 : Uniquement le dessin fait main en arrière-plan global -->
   <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
-    <!-- Première illustration (le papier en fond) -->
-    <img src="ElevenLabs_image_seedream-4_Une texture dou_2026-11-03T22_07_03.jpg" alt="Fond papier" class="absolute inset-0 w-full h-full object-cover select-none">
-    <!-- Seconde illustration (le dessin fait main par-dessus) -->
-    <img src="Sketch1793913958083allrightsreservedtoLouiseÉmilieSchreiber.png" alt="Dessin superposé" class="absolute inset-0 w-full h-full object-cover select-none">
+    <img src="Sketch1793913958083allrightsreservedtoLouiseÉmilieSchreiber.png" alt="Arrière-plan dessin" class="absolute inset-0 w-full h-full object-cover select-none">
   </div>
 
   <div id="app" class="relative z-10 min-h-screen flex flex-col justify-between">
@@ -86,7 +80,6 @@
     <header class="header-bg bg-custom-blue text-white shadow-md w-full border-0">
       <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between border-0">
         
-        <!-- Zone Gauche : Icônes -->
         <div class="flex items-center space-x-2">
           <!-- Bouton Musique -->
           <button id="dove-btn" onclick="toggleDoveSound()" title="Ambiance Musicale" class="p-1.5 rounded-full bg-black hover:bg-slate-800 text-white transition cursor-pointer flex items-center justify-center active:scale-95">
@@ -111,7 +104,6 @@
           </button>
         </div>
 
-        <!-- Titre centré -->
         <h1 class="text-lg md:text-2xl tracking-wide text-amber-400 text-center m-0 p-0 border-0 flex-1 font-opensans-bold">
           Sous le manteau de Saint Joseph
         </h1>
@@ -137,13 +129,11 @@
               </p>
             </div>
 
-            <!-- Liste des 9 jours -->
             <div id="neuvaine-list" class="space-y-2.5">
               <!-- Rempli par JavaScript -->
             </div>
           </div>
 
-          <!-- Message de fin de neuvaine exact -->
           <div id="neuvaine-completion-msg" class="hidden mt-6 pt-4 border-t border-amber-200/60 text-center">
             <p class="text-xs font-opensans-bold text-amber-700 italic">
               Que vos prières soient exaucées.
@@ -163,7 +153,6 @@
               </h2>
             </div>
 
-            <!-- Conteneur de l'image -->
             <div class="halo-container max-w-md mx-auto relative flex flex-col items-center w-full flex-grow justify-center">
               
               <div class="relative rounded-2xl overflow-hidden halo-effect border-2 border-amber-400/40 p-1 bg-slate-900 w-full flex justify-center h-full max-h-[580px]">
@@ -173,20 +162,16 @@
                   class="w-full h-full object-cover rounded-xl transition-transform duration-500"
                 />
 
-                <!-- Pastille 1 -->
                 <button onclick="openModal('dates')" class="absolute top-1/4 left-1/4 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-amber-500 hover:bg-amber-400 shadow-lg animate-pulse transition hover:scale-110 active:scale-95 cursor-pointer">
                 </button>
 
-                <!-- Pastille 2 -->
                 <button onclick="openModal('titles')" class="absolute top-1/3 right-1/4 transform translate-x-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-blue-600 hover:bg-blue-500 shadow-lg animate-pulse transition hover:scale-110 active:scale-95 cursor-pointer">
                 </button>
 
-                <!-- Pastille 3 -->
                 <button onclick="openModal('chaste-heart')" class="absolute top-[52%] right-[25%] transform translate-x-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-red-700 hover:bg-red-600 shadow-lg animate-pulse transition hover:scale-110 active:scale-95 cursor-pointer">
                 </button>
               </div>
 
-              <!-- Pastille 4 -->
               <button onclick="window.open('https://www.biblewalks.com/nazareth_maps/', '_blank')" title="Cartes et sites de Nazareth" class="absolute top-[65%] left-1/4 transform -translate-x-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-emerald-600 hover:bg-emerald-500 shadow-lg animate-pulse transition hover:scale-110 active:scale-95 cursor-pointer">
               </button>
 
@@ -196,7 +181,6 @@
             </div>
           </div>
 
-          <!-- Modale -->
           <div id="interactive-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-slate-950/60 backdrop-blur-sm p-4">
             <div id="modal-container" class="bg-white rounded-2xl max-w-2xl w-full p-6 md:p-8 shadow-2xl border border-amber-200 relative animate-in fade-in zoom-in duration-200 max-h-[90vh] overflow-y-auto">
               <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 p-2 rounded-lg text-lg font-bold cursor-pointer">
@@ -211,7 +195,6 @@
 
     </div>
 
-    <!-- Bloc Nazareth -->
     <div class="relative z-10 -mb-6 flex justify-center px-4">
       <div class="inline-flex items-center gap-4 rounded-xl border border-amber-200/60 bg-white/95 px-6 py-3 shadow-md backdrop-blur-sm text-lg font-opensans-bold text-slate-800">
         <span class="text-slate-500 font-normal">Nazareth :</span>
@@ -221,14 +204,12 @@
       </div>
     </div>
 
-    <!-- Pied de Page -->
     <footer class="w-full text-center py-6 text-xs text-slate-400 border-t border-slate-200/60 bg-white">
       <small>&copy; 2026 Sous le manteau de Saint Joseph. Tous droits réservés.</small>
     </footer>
 
   </div>
 
-  <!-- Scripts -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       renderNeuvaine();
@@ -447,7 +428,7 @@
             <p>Tout pour Jésus, tout pour Marie, tout à votre imitation, patriarche Joseph ! telle sera ma devise à la vie à la mort. Ainsi soit-il</p>
           </div>
           <div class="text-[11px] text-slate-400 border-t border-slate-100 pt-3 text-center">
-            <p><strong>Prière de saint Pie X au glorieux Saint Joseph, modèle des travailleurs</strong></p>
+               <p><strong>Prière de saint Pie X au glorieux Saint Joseph, modèle des travailleurs</strong></p>
             <p><strong>Source :</strong> laportelatine.org</p>
           </div>
         `;
