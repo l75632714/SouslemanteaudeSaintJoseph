@@ -39,7 +39,7 @@
 </head>
 <body class="bg-slate-900 text-slate-800 min-h-screen flex flex-col relative">
 
-  <!-- Arrière-plan global corrigé : z-index négatif et affichage forcé -->
+  <!-- Arrière-plan global avec ton illustration -->
   <div style="position: fixed; inset: 0; z-index: -10; pointer-events: none; overflow: hidden;">
     <img src="Sketch1793913958083allrightsreservedtoLouiseÉmilieSchreiber.png" alt="Arrière-plan dessin" style="width: 100%; height: 100%; object-fit: cover; -webkit-user-select: none; user-select: none;">
   </div>
